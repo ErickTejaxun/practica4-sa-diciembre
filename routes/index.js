@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Practica 4 SA Diciembre 2020 ' });
+  res.render('index', { title: 'Calificacion practica 4  Con jenkins y ansible ' });
 });
 
 router.get('/info', function(req, res, next) {
