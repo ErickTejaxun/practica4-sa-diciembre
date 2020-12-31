@@ -1,0 +1,27 @@
+- name: Configurar el servidor de produccion
+  hosts: servidor-produccion-practica4
+  gather_facts: no
+
+  tasks:
+    - name: Detener ejecucion actual
+      command: forever stopall
+
+    - name: Borrar app actual
+      command: test -f ~/app/ && rm -r ~/app/ -f
+
+    - name: Crear carpeta para la aplicacion
+      command: mkdir ~/app     
+    
+    - name: example copying file with owner and permissions
+      copy:
+        src: /home/jenkins/app.zip
+        dest: ~/app/app.zip
+        owner: g2616501300304
+        group: g2616501300304
+        mode: 0777
+
+    - name: desempaquetar aplicacion
+      command: unzip ~/app/app.zip -d ~/app
+
+    - name: Ejecutar de nuevo aplicacion
+      command: export PORT=8081 && npm start      
