@@ -15,7 +15,7 @@
         mode: 0777
 
     - name: Detener desempaquetar aplicacion
-      command: unzip ~/app/app.zip ~/app
+      command: unzip ~/app/app.zip -d ~/app
 
     - name: Ejecutar de nuevo aplicacion
       command: export PORT=8082 npm start      
