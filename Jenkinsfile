@@ -31,5 +31,15 @@ pipeline
                 echo 'Pruebas realizadas con éxito '                
             }                        
         }
+
+        stage("Creando artefacto")
+            steps
+            {
+                sh 'zip -r app.zip ./'
+                sh 'cp app.zip ~/'
+                echo 'Se ha creado el artefacto'
+                sh 'scp '
+            }
+        
     }
 }
