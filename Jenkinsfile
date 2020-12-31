@@ -10,7 +10,8 @@ pipeline
         {               
             
             steps
-            {                                     
+            {         
+                sh 'forever stopall'                            
                 sh 'export PORT=1000'
                 echo 'Pruebas de ejecución de la aplicacion'
                 sh 'npm install'                
