@@ -19,7 +19,7 @@ pipeline
             }
         }
 
-        stage("lanzando pruebas")
+        stage("Lanzando pruebas")
         {
             steps
             {
