@@ -24,7 +24,7 @@
       command: unzip ~/app/app.zip -d ~/app
 
     - name: Estableciendo puerto
-      command: export PORT=8081  
+      command: PORT=8081  
 
     - name: Ejecutar de nuevo aplicacion
       command: npm start           
