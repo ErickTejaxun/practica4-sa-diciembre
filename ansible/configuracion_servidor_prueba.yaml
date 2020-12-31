@@ -28,4 +28,4 @@
     #  command: PORT=8082
 
     - name: Ejecutar de nuevo aplicacion
-      command: npm start           
+      command: npm start --prefix ~/app/         
