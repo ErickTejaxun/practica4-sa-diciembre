@@ -29,3 +29,4 @@
 
     - name: Ejecutar de nuevo aplicacion
       command: npm start --prefix ~/app/         
+      environment:
