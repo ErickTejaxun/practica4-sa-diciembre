@@ -1,0 +1,6 @@
+[local]
+localhost ansible_connection=local
+
+[gce_instances]
+servidor-prueba-practica4 ansible_user=g2616501300304
+servidor-produccion-practica4 ansible_user=g2616501300304

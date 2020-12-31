@@ -1,0 +1,15 @@
+- name: Configurar el servidor de produccion
+  hosts: servidor-prueba-practica4
+  gather_facts: no
+
+  tasks:
+    - name: Detener ejecucion actual
+      command: forever stopall
+
+    - name: example copying file with owner and permissions
+      copy:
+        src: /home/jenkins/app.zip
+        dest: ~/app.zip
+        owner: g2616501300304
+        group: g2616501300304
+        mode: 0777
