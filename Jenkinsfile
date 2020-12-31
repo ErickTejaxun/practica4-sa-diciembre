@@ -4,6 +4,11 @@
 pipeline
 {
     agent any  
+
+    environment {
+        PORT = 100000        
+    }
+
     stages
     {
         stage("Prueba de ejecución")
