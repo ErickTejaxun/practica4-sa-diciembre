@@ -24,8 +24,8 @@
     - name: desempaquetar aplicacion
       command: unzip ~/app/app.zip -d ~/app
 
-    - name: Estableciendo puerto
-      command: PORT=8082
+    #- name: Estableciendo puerto
+    #  command: PORT=8082
 
     - name: Ejecutar de nuevo aplicacion
       command: npm start           
