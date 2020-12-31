@@ -24,6 +24,7 @@ pipeline
             steps
             {
                 echo 'Comenzando pruebas unitarias'
+                sh 'export PORT=1000'
                 sh 'npm test'                
                 sh 'forever stopall'
                 echo 'Pruebas realizadas con éxito '                
