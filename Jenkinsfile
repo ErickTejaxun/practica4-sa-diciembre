@@ -12,7 +12,8 @@ pipeline
         {               
             
             steps
-            {         
+            {    
+                sh 'export PORT='     
                 sh 'forever stopall'                                            
                 echo 'Pruebas de ejecución de la aplicacion'
                 sh 'npm install'                
