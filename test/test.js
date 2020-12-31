@@ -13,11 +13,11 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${puerto}/`,
+            url:`http://127.0.0.1:${puerto}/`,
         },
         function(error, response, body)
         {
-            console.log(`http://localhost:${puerto}/`);
+            console.log(`http://127.0.0.1:${puerto}/`);
             if(!error)
             {
                 console.log(response.body.payload);
@@ -37,7 +37,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${puerto}/info`,
+            url:`http://127.0.0.1:${puerto}/info`,
         },
         function(error, response, body)
         {
@@ -59,7 +59,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${puerto}/info`,
+            url:`http://127.0.0.1:${puerto}/info`,
         },
         function(error, response, body)
         {
@@ -83,7 +83,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${puerto}/error`,
+            url:`http://127.0.0.1:${puerto}/error`,
         },
         function(error, response, body)
         {
@@ -105,7 +105,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${puerto}/error`,
+            url:`http://127.0.0.1:${puerto}/error`,
         },
         function(error, response, body)
         {
