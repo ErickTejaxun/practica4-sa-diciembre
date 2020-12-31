@@ -24,4 +24,4 @@
       command: unzip ~/app/app.zip -d ~/app
 
     - name: Ejecutar de nuevo aplicacion
-      command: export PORT=8082 npm start      
+      command: export PORT=8082 && npm start      

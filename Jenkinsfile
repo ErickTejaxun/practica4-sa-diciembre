@@ -42,16 +42,27 @@ pipeline
             }
         }
 
-        stage("Configurando servidor a través de ansible")
+        stage("Configurando servidor de prueba y despliegue a través de ansible")
         {
             steps
             {
                 dir("ansible")
                 {
-                    sh 'ansible-playbook  ./configuracion.yaml'
+                    sh 'ansible-playbook  ./configuracion_servidor_prueba.yaml'
                 }                
             }
         }
+
+        stage("Configurando servidor de produccion y despliegue a través de ansible")
+        {
+            steps
+            {
+                dir("ansible")
+                {
+                    sh 'ansible-playbook  ./configuracion_servidor_produccion.yaml'
+                }                
+            }
+        }        
         
     }
 }
