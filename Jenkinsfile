@@ -48,7 +48,7 @@ pipeline
             {
                 dir("ansible")
                 {
-                    sh 'ansible-playbook  ./configuracion_servidor_prueba.yaml'
+                    sh 'ansible-playbook  ./configuracion_servidor_prueba.yaml'                    
                 }                
             }
         }
