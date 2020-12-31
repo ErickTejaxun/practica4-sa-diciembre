@@ -33,6 +33,7 @@ pipeline
         }
 
         stage("Creando artefacto")
+        {
             steps
             {
                 sh 'zip -r app.zip ./'
@@ -40,6 +41,7 @@ pipeline
                 echo 'Se ha creado el artefacto'
                 sh 'scp '
             }
+        }
         
     }
 }
