@@ -16,8 +16,7 @@ pipeline
             
             steps
             {         
-                sh 'forever stopall'                            
-                sh 'export PORT=10000'
+                sh 'forever stopall'                                            
                 echo 'Pruebas de ejecución de la aplicacion'
                 sh 'npm install'                
                 sh 'npm start'                  
@@ -29,8 +28,7 @@ pipeline
         {
             steps
             {
-                echo 'Comenzando pruebas unitarias'
-                sh 'export PORT=10000'
+                echo 'Comenzando pruebas unitarias'                
                 sh 'npm test'                
                 sh 'forever stopall'
                 echo 'Pruebas realizadas con éxito '                
