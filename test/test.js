@@ -5,7 +5,7 @@ var Request = require("request");
 var should = require("should");
 
 
-var puerto =10000;
+var puerto =3000;
 describe('Pruebas unitarias sobre el servidor de backend', ()=>
 {
 

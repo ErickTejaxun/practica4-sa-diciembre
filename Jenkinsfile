@@ -5,9 +5,6 @@ pipeline
 {
     agent any  
 
-    environment {
-        PORT = 100000        
-    }
 
     stages
     {
