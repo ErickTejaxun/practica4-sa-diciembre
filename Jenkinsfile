@@ -37,9 +37,19 @@ pipeline
             steps
             {
                 sh 'zip -r app.zip ./'
-                sh 'cp app.zip ~/'
-                echo 'Se ha creado el artefacto'
-                sh 'scp '
+                sh 'cp app.zip /home/jenkins/'
+                echo 'Se ha creado el artefacto'                
+            }
+        }
+
+        stage("Configurando servidor a través de ansible")
+        {
+            steps
+            {
+                dir("ansible")
+                {
+                    sh 'ansible-playbook -i ansible_hosts configuracion.yaml'
+                }                
             }
         }
         
