@@ -3,6 +3,9 @@ const { json } = require('body-parser');
 var expect = require('expect');
 var Request = require("request");
 var should = require("should");
+
+
+var puerto =10000;
 describe('Pruebas unitarias sobre el servidor de backend', ()=>
 {
 
@@ -10,11 +13,11 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${process.env.PORT}/`,
+            url:`http://localhost:${puerto}/`,
         },
         function(error, response, body)
         {
-            console.log(`http://localhost:${process.env.PORT}/`);
+            console.log(`http://localhost:${puerto}/`);
             if(!error)
             {
                 console.log(response.body.payload);
@@ -34,7 +37,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${process.env.PORT}/info`,
+            url:`http://localhost:${puerto}/info`,
         },
         function(error, response, body)
         {
@@ -56,7 +59,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${process.env.PORT}/info`,
+            url:`http://localhost:${puerto}/info`,
         },
         function(error, response, body)
         {
@@ -80,7 +83,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${process.env.PORT}/error`,
+            url:`http://localhost:${puerto}/error`,
         },
         function(error, response, body)
         {
@@ -102,7 +105,7 @@ describe('Pruebas unitarias sobre el servidor de backend', ()=>
     {
         Request.get(            
         {
-            url:`http://localhost:${process.env.PORT}/error`,
+            url:`http://localhost:${puerto}/error`,
         },
         function(error, response, body)
         {
