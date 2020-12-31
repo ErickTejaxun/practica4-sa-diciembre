@@ -48,7 +48,7 @@ pipeline
             {
                 dir("ansible")
                 {
-                    sh 'ansible-playbook -i ansible_hosts configuracion.yaml'
+                    sh 'ansible-playbook -i ./ansible_hosts ./configuracion.yaml'
                 }                
             }
         }
