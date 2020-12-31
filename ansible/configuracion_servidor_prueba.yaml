@@ -7,7 +7,7 @@
       command: forever stopall
 
     - name: Borrar app actual
-      command: test -f ~/app/ && rm -r ~/app/ -f
+      command: rm -r ~/app/ -f
       
     - name: Crear carpeta para la aplicacion
       command: mkdir ~/app     
