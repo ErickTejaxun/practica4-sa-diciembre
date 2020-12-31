@@ -9,7 +9,13 @@
     - name: example copying file with owner and permissions
       copy:
         src: /home/jenkins/app.zip
-        dest: ~/app.zip
+        dest: ~/app/app.zip
         owner: g2616501300304
         group: g2616501300304
         mode: 0777
+
+    - name: Detener desempaquetar aplicacion
+      command: unzip ~/app/app.zip ~/app
+
+    - name: Ejecutar de nuevo aplicacion
+      command: export PORT=8082 npm start      
